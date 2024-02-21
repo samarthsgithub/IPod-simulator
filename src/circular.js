@@ -7,10 +7,9 @@ import ZingTouch from "zingtouch";
 //button
 class Circular extends Component {
   componentDidMount() {
-    let{updateActiveIndex,handleCentreClick,handleMenuButton} = this.props;
+    let{updateActiveIndex,handleCentreClick,handleMenuButton,changeInAngle} = this.props;
     const touchArea = document.querySelector(".circular_menu");
     const myRegion = new ZingTouch.Region(touchArea);
-    var changeInAngle=0;
     myRegion.bind(touchArea, "rotate", (event) => {   // It is event handler to change the Active Index when wheel is rotated
         changeInAngle++;
         const distanceFromLast  = event.detail.distanceFromLast;
@@ -18,6 +17,9 @@ class Circular extends Component {
             const  direction = distanceFromLast > 0 ? "clockwise":"counterclockwise";
             updateActiveIndex(direction);
         }
+      this.setState({
+        changeInAngle
+      })
     });
     const innercircle = document.querySelector(".inner-circle");
     const myRegiontwo = new ZingTouch.Region(innercircle);
