@@ -30,13 +30,13 @@ class App extends React.Component {
   // function to handle the centre click button
   handleCentreClick = ()=>{
     let{currentMenu,activeIndex,showMenuItems} = this.state;
-       if(activeIndex==0){
+       if(activeIndex===0){
         currentMenu = 1;
-       }else if(activeIndex==1){
+       }else if(activeIndex===1){
          currentMenu = 2;
-       }else if(activeIndex==2){
+       }else if(activeIndex===2){
         currentMenu = 3;
-       }else if(activeIndex==3){
+       }else if(activeIndex===3){
         currentMenu = 4;
        }
        showMenuItems=!showMenuItems
@@ -61,11 +61,11 @@ class App extends React.Component {
   
 
   render(){
-   let{x} = this.state;
+
     return(
       <>
         <h1>IPOD APP</h1>
-        <p>Hello How are you</p>
+      
         <div className="IPOD-Container">
          
            <Screen menuItems={this.state.menuItems} activeIndex={this.state.activeIndex}
