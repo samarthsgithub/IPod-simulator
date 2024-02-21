@@ -7,7 +7,7 @@ class Settings extends React.Component{
     render(){
         return(
             <>
-           <img src="https://cdn-icons-png.flaticon.com/128/9637/9637797.png"style={{width:"15rem",height:"15rem",marginLeft:"4rem"}} ></img>
+           <img src="https://cdn-icons-png.flaticon.com/128/9637/9637797.png"style={{width:"15rem",height:"15rem",marginLeft:"4rem"}} alt=""></img>
             </>
         )
     }
