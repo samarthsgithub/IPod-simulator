@@ -12,7 +12,9 @@ class App extends React.Component {
     activeIndex:0, // to check which menu item needs to be blue or selected
     menuItems:["Cover Flow","Music","Games","Settings"], // state items to be rendered on menu 
     showMenuItems:true,  // to check if menu items need to be shown or not
-    currentMenu:0 // index for checking currentMenu to be rendered on screen
+    currentMenu:0, // index for checking currentMenu to be rendered on screen
+    changeInAngle:0
+    
   };
  }
  //function to update activeMenuIndex on rotating wheel
@@ -75,6 +77,7 @@ class App extends React.Component {
            <Circular updateActiveIndex = {this.updateActiveIndex}
                      handleCentreClick={this.handleCentreClick}
                      handleMenuButton={this.handleMenuButton}
+                     changeInAngle={this.state.changeInAngle}
            ></Circular>
         </div>
       </>
