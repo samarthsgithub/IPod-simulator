@@ -1,13 +1,10 @@
 import React from "react"
 import "./index.css"
-import Sound from "./audio.mp3"
+
 
 // This is the interface that will open when Music is opened
 class Music extends React.Component{
   
-   play =()=>{
-    new Audio(Sound).play()
-   }
     
     render(){
         return(
