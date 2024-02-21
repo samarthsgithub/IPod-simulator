@@ -6,7 +6,7 @@ class Menu extends React.Component {
  // Also it will be hidden when showMenuItem is changed to false
          
     render(){
-        let{menuItems,activeIndex,showMenuItems,onclickshowitems} = this.props
+        let{menuItems,activeIndex,showMenuItems} = this.props
         return (
             <>
              <div>
