@@ -10,7 +10,7 @@ class Circular extends Component {
     let{updateActiveIndex,handleCentreClick,handleMenuButton} = this.props;
     const touchArea = document.querySelector(".circular_menu");
     const myRegion = new ZingTouch.Region(touchArea);
-    var changeInAngle = 0;
+    var changeInAngle=0;
     myRegion.bind(touchArea, "rotate", (event) => {   // It is event handler to change the Active Index when wheel is rotated
         changeInAngle++;
         const distanceFromLast  = event.detail.distanceFromLast;
@@ -37,10 +37,10 @@ class Circular extends Component {
     return (
       <div className="circular_menu">
         <p id="menu-button">MENU</p>
-        <img id="forward" src="https://cdn-icons-png.flaticon.com/128/31/31085.png"></img>
-            <img id="backward" src="https://cdn-icons-png.flaticon.com/128/4402/4402628.png"></img>
+        <img id="forward" src="https://cdn-icons-png.flaticon.com/128/31/31085.png" alt=""></img>
+            <img id="backward" src="https://cdn-icons-png.flaticon.com/128/4402/4402628.png" alt=""></img>
            
-          <img id="play_pause" src="https://cdn-icons-png.flaticon.com/128/5725/5725942.png"></img>
+          <img id="play_pause" src="https://cdn-icons-png.flaticon.com/128/5725/5725942.png" alt=""></img>
              
             <div className="inner-circle">
                   
@@ -52,4 +52,3 @@ class Circular extends Component {
 }
 
 export default Circular;
-
